@@ -1,2 +1,2 @@
 # Random-Random
-The name is cool
+https://gusarich.github.io/Random-Random/
