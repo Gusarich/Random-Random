@@ -1,0 +1,12 @@
+body {
+    background-color: #111;
+    color: #F7F9FB;
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
