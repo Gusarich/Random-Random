@@ -14,10 +14,10 @@ function format (n) {
 }
 
 function action () {
-    console.log(1)
+    console.log(gameValues.rtp / (100 * gameValues.mul))
 }
 
 function update () {
-    $('#balance_r')[0].innerText = format(balances.r)
-    $('#balance_x')[0].innerText = format(balances.x)
+    $('#value_r')[0].innerText = format(gameValues.r)
+    $('#value_x')[0].innerText = format(gameValues.x)
 }
