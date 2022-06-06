@@ -8,6 +8,16 @@ function randomString () {
     return result;
 }
 
+function format (n) {
+    if (n < 10000) return n.tofixed(2)
+    return n.toExponential(2).replace('+', '')
+}
+
 function action () {
 
+}
+
+function update () {
+    $('#balance_r')[0].innerText = format(balances.r)
+    $('#balance_x')[0].innerText = format(balances.x)
 }

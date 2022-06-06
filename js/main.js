@@ -3,4 +3,6 @@ $(document).ready(() => {
         r: 1,
         x: 0
     }
+
+    setInterval(update, 25)
 })
