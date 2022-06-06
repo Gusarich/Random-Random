@@ -60,6 +60,7 @@ body {
     top: 20px;
     transform: translate(-50%);
     font-size: 18px;
+    text-align: center;
 }
 
 .action {
@@ -72,6 +73,8 @@ body {
     vertical-align: middle;
     line-height: 40px;
     margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 #actions_action {
