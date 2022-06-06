@@ -4,6 +4,7 @@ $(document).ready(() => {
         x: 0.0,
         rtp: 90.0,
         mul: 2.0,
+        prob: 0.45,
     }
 
     $('#actions_action').click(action)

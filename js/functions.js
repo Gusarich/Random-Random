@@ -14,10 +14,13 @@ function format (n) {
 }
 
 function action () {
-    console.log(gameValues.rtp / (100 * gameValues.mul))
+    // gameValues.prob = gameValues.rtp / (100 * gameValues.mul)
 }
 
 function update () {
     $('#value_r')[0].innerText = format(gameValues.r)
     $('#value_x')[0].innerText = format(gameValues.x)
+    $('#value_rtp')[0].innerText = format(gameValues.rtp) + '%'
+    $('#value_mul')[0].innerText = 'x' + format(gameValues.mul)
+    $('#value_prob')[0].innerText = format(gameValues.prob) + '%'
 }
