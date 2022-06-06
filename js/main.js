@@ -1,3 +1,6 @@
 $(document).ready(() => {
-    $('#random_title')[0].innerText = randomString(10)
+    window.balances = {
+        r: 1,
+        x: 0
+    }
 })
