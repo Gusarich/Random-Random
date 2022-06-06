@@ -14,7 +14,6 @@ function format (n) {
 }
 
 function action () {
-    // gameValues.prob = gameValues.rtp / (100 * gameValues.mul)
     if (gameValues.r >= 1) {
         if (rng.random() < gameValues.prob) gameValues.r *= gameValues.mul
         else gameValues.r = 0
@@ -27,6 +26,24 @@ function reset () {
     $('#random_title')[0].innerText = randomString()
 }
 
+function upgradeRTP () {
+    if (gameValues.r >= gameValues.upgrade_rtp_cost) {
+        gameValues.r -= gameValues.upgrade_rtp_cost
+        gameValues.rtp += gameValues.upgrade_rtp_boost
+        gameValues.upgrade_rtp_cost *= gameValues.upgrade_rtp_costmul
+        gameValues.prob = gameValues.rtp / (100 * gameValues.mul)
+    }
+}
+
+function upgradeMul () {
+    if (gameValues.r >= gameValues.upgrade_mul_cost) {
+        gameValues.r -= gameValues.upgrade_mul_cost
+        gameValues.mul += gameValues.upgrade_mul_boost
+        gameValues.upgrade_mul_cost *= gameValues.upgrade_mul_costmul
+        gameValues.prob = gameValues.rtp / (100 * gameValues.mul)
+    }
+}
+
 function update () {
     $('#value_r')[0].innerText = format(gameValues.r)
     $('#value_x')[0].innerText = format(gameValues.x)
@@ -34,4 +51,8 @@ function update () {
     $('#value_mul')[0].innerText = 'x' + format(gameValues.mul)
     $('#value_prob')[0].innerText = format(gameValues.prob * 100) + '%'
     $('#value_base_r')[0].innerText = format(gameValues.base_r)
+    $('#upgrade_rtp_boost')[0].innerText = '+' + format(gameValues.upgrade_rtp_boost) + '%'
+    $('#upgrade_rtp_cost')[0].innerText = format(gameValues.upgrade_rtp_cost) + ' R'
+    $('#upgrade_mul_boost')[0].innerText = '+' + format(gameValues.upgrade_mul_boost) + '%'
+    $('#upgrade_mul_cost')[0].innerText = format(gameValues.upgrade_mul_cost) + ' R'
 }
