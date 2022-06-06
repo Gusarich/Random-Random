@@ -16,6 +16,8 @@ body {
     position: absolute;
     left: 20px;
     top: 20px;
+    width: 70px;
+    font-size: 21px;
 }
 
 .balances * {
@@ -23,5 +25,7 @@ body {
 }
 
 .balance-num {
-    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
