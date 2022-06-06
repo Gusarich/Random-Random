@@ -81,3 +81,18 @@ body {
 .action-info {
     display: block;
 }
+
+.mul {
+    position: absolute;
+    left: 75%;
+    top: 20px;
+    transform: translate(-50%);
+    font-size: 18px;
+    text-align: center;
+}
+
+#mul_upgrade {
+    margin-top: 10px;
+    height: 72px;
+    line-height: 24px;
+}
