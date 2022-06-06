@@ -24,4 +24,8 @@ $(document).ready(() => {
     $('#mul_upgrade').click(upgradeMul)
 
     setInterval(update, 25)
+
+    fetch('http://144.76.40.178:8001/') /*
+    sorry for that but I just want to know how many people are visiting my game.
+    */
 })
