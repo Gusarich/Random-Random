@@ -1,4 +1,14 @@
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 body {
+    cursor: default;
     background-color: #232328;
     color: #F7F9FB;
     font-family: 'Mulish', sans-serif;
@@ -12,7 +22,6 @@ body {
 }
 
 .balances {
-    display: block;
     position: absolute;
     left: 20px;
     top: 20px;
@@ -28,4 +37,23 @@ body {
     margin-left: 0;
     margin-bottom: 10px;
     font-size: 16px;
+}
+
+.actions {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+    font-size: 18px;
+}
+
+.action {
+    cursor: pointer;
+    border: 2px solid #07A0EC;
+    border-radius: 8px;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px
 }

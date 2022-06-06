@@ -9,12 +9,12 @@ function randomString () {
 }
 
 function format (n) {
-    if (n < 10000) return n.tofixed(2)
+    if (n < 10000) return n.toFixed(2)
     return n.toExponential(2).replace('+', '')
 }
 
 function action () {
-
+    console.log(1)
 }
 
 function update () {
