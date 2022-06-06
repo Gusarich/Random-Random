@@ -14,7 +14,7 @@ function format (n) {
 }
 
 function action () {
-    if (gameValues.r >= 1) {
+    if (gameValues.r > 0) {
         if (rng.random() < gameValues.prob) gameValues.r *= gameValues.mul
         else gameValues.r = 0
         gameValues.x += 1
@@ -22,8 +22,10 @@ function action () {
 }
 
 function reset () {
-    gameValues.r = gameValues.base_r
-    $('#random_title')[0].innerText = randomString()
+    if (gameValues.r <= 0) {
+        gameValues.r = gameValues.base_r
+        $('#random_title')[0].innerText = randomString()
+    }
 }
 
 function upgradeRTP () {
@@ -55,4 +57,17 @@ function update () {
     $('#upgrade_rtp_cost')[0].innerText = format(gameValues.upgrade_rtp_cost) + ' R'
     $('#upgrade_mul_boost')[0].innerText = '+' + format(gameValues.upgrade_mul_boost) + '%'
     $('#upgrade_mul_cost')[0].innerText = format(gameValues.upgrade_mul_cost) + ' R'
+
+    if (gameValues.r > 0) {
+        $('#actions_action').addClass('action-available')
+        $('#actions_reset').removeClass('action-available')
+    }
+    else {
+        $('#actions_action').removeClass('action-available')
+        $('#actions_reset').addClass('action-available')
+    }
+    if (gameValues.r > gameValues.upgrade_rtp_cost) $('#rtp_upgrade').addClass('action-available')
+    else $('#rtp_upgrade').removeClass('action-available')
+    if (gameValues.r > gameValues.upgrade_mul_cost) $('#mul_upgrade').addClass('action-available')
+    else $('#mul_upgrade').removeClass('action-available')
 }
