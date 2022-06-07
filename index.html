@@ -11,71 +11,71 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <span class="title">Random <span id="random_title">Random</span></span>
+        <span class="title">Random <span class="random_title">Random</span></span>
 
         <div class="values">
             <span class="value-chr">R</span>
-            <span class="value-num" id="value_r">1.00</span>
+            <span class="value-num value_r">1.00</span>
             <span class="value-chr">X</span>
-            <span class="value-num" id="value_x">0.00</span>
+            <span class="value-num value_x">0.00</span>
         </div>
 
         <div class="rtp">
-            <span class="value-chr">RTP: <span class="value-num" id="value_rtp">95.00%</span></span>
-            <div class="action" id="rtp_upgrade">Upgrade
-                <span class="action-info" id="upgrade_rtp_boost">+1.00%</span>
-                <span class="action-info" id="upgrade_rtp_cost">5 R</span>
+            <span class="value-chr">RTP: <span class="value-num value_rtp">95.00%</span></span>
+            <div class="action rtp_upgrade">Upgrade
+                <span class="action-info upgrade_rtp_boost">+1.00%</span>
+                <span class="action-info upgrade_rtp_cost">5 R</span>
             </div>
 
-            <span class="value-chr">Base R: <span class="value-num" id="value_base_r">1.00-</span></span>
-            <div class="action" id="base_r_upgrade">Upgrade
-                <span class="action-info" id="upgrade_base_r_boost">x2.00-</span>
-                <span class="action-info" id="upgrade_base_r_cost">25 X-</span>
+            <span class="value-chr">Base R: <span class="value-num value_base_r">1.00-</span></span>
+            <div class="action base_r_upgrade">Upgrade
+                <span class="action-info upgrade_base_r_boost">x2.00-</span>
+                <span class="action-info upgrade_base_r_cost">25 X-</span>
             </div>
 
-            <span class="value-chr">X Gain: <span class="value-num" id="value_x_gain">[0.00; 1.00)</span></span>
-            <div class="action" id="x_gain_min_upgrade">Upgrade
-                <span class="action-info" id="upgrade_x_gain_min_boost">Min +0.10-</span>
-                <span class="action-info" id="upgrade_x_gain_min_cost">25 R-</span>
+            <span class="value-chr">X Gain: <span class="value-num value_x_gain">[0.00; 1.00)</span></span>
+            <div class="action x_gain_min_upgrade">Upgrade
+                <span class="action-info upgrade_x_gain_min_boost">Min +0.10-</span>
+                <span class="action-info upgrade_x_gain_min_cost">25 R-</span>
             </div>
-            <div class="action" id="x_gain_max_upgrade">Upgrade
-                <span class="action-info" id="upgrade_x_gain_max_boost">Max +0.10-</span>
-                <span class="action-info" id="upgrade_x_gain_max_cost">25 R-</span>
+            <div class="action x_gain_max_upgrade">Upgrade
+                <span class="action-info upgrade_x_gain_max_boost">Max +0.10-</span>
+                <span class="action-info upgrade_x_gain_max_cost">25 R-</span>
             </div>
         </div>
 
         <div class="actions noselect">
-            <span class="value-chr">Probability: <span class="value-num" id="value_prob">45.00%</span></span>
-            <div class="action" id="actions_action">Action</div>
-            <span class="value-chr">Reset R to <span class="value-num" id="value_base_r">1.00</span></span>
-            <div class="action" id="actions_reset">Reset</div>
+            <span class="value-chr">Probability: <span class="value-num value_prob">45.00%</span></span>
+            <div class="action actions_action">Action</div>
+            <span class="value-chr">Reset R to <span class="value-num value_base_r">1.00</span></span>
+            <div class="action actions_reset">Reset</div>
         </div>
 
         <div class="mul">
-            <span class="value-chr">Multiplier: <span class="value-num" id="value_mul">x2.00</span></span>
-            <div class="action" id="mul_upgrade">Upgrade
-                <span class="action-info" id="upgrade_mul_boost">+0.10</span>
-                <span class="action-info" id="upgrade_mul_cost">30 R</span>
+            <span class="value-chr">Multiplier: <span class="value-num value_mul">x2.00</span></span>
+            <div class="action mul_upgrade">Upgrade
+                <span class="action-info upgrade_mul_boost">+0.10</span>
+                <span class="action-info upgrade_mul_cost">30 R</span>
             </div>
 
-            <span class="value-chr">Auto-Reset: <span class="value-num" id="value_auto_reset_time">0.00s-</span></span>
-            <div class="action" id="auto_reset_unlock">Unlock
-                <span class="action-info" id="upgrade_auto_reset_base_time">2.00s-</span>
-                <span class="action-info" id="upgrade_auto_reset_cost">50 X-</span>
+            <span class="value-chr">Auto-Reset: <span class="value-num value_auto_reset_time">0.00s-</span></span>
+            <div class="action auto_reset_unlock">Unlock
+                <span class="action-info upgrade_auto_reset_base_time">2.00s-</span>
+                <span class="action-info upgrade_auto_reset_cost">50 X-</span>
             </div>
-            <div class="action hide" id="auto_reset_upgrade">Upgrade
-                <span class="action-info" id="upgrade_auto_reset_boost">-0.10s-</span>
-                <span class="action-info" id="upgrade_auto_reset_cost">70 X-</span>
+            <div class="action hide auto_reset_upgrade">Upgrade
+                <span class="action-info upgrade_auto_reset_boost">-0.10s-</span>
+                <span class="action-info upgrade_auto_reset_cost">70 X-</span>
             </div>
 
-            <span class="value-chr">Auto-Action: <span class="value-num" id="value_auto_action_time">0.00s-</span></span>
-            <div class="action" id="auto_action_unlock">Unlock
-                <span class="action-info" id="upgrade_auto_action_base_time">1.00s-</span>
-                <span class="action-info" id="upgrade_auto_action_cost">100 X-</span>
+            <span class="value-chr">Auto-Action: <span class="value-num value_auto_action_time">0.00s-</span></span>
+            <div class="action auto_action_unlock">Unlock
+                <span class="action-info upgrade_auto_action_base_time">1.00s-</span>
+                <span class="action-info upgrade_auto_action_cost">100 X-</span>
             </div>
-            <div class="action hide" id="auto_action_upgrade">Upgrade
-                <span class="action-info" id="upgrade_auto_action_boost">-0.05s-</span>
-                <span class="action-info" id="upgrade_auto_action_cost">140 X-</span>
+            <div class="action hide auto_action_upgrade">Upgrade
+                <span class="action-info upgrade_auto_action_boost">-0.05s-</span>
+                <span class="action-info upgrade_auto_action_cost">140 X-</span>
             </div>
         </div>
     </body>
