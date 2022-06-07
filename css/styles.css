@@ -1,3 +1,7 @@
+.hide {
+    display: none;
+}
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -48,12 +52,6 @@ body {
     text-align: center;
 }
 
-#rtp_upgrade {
-    margin-top: 10px;
-    height: 72px;
-    line-height: 24px;
-}
-
 .actions {
     position: absolute;
     left: 50%;
@@ -68,10 +66,11 @@ body {
     border: 2px solid #07A0EC;
     border-radius: 8px;
     width: 120px;
-    height: 40px;
+    margin-top: 10px;
+    height: 72px;
+    line-height: 24px;
     text-align: center;
     vertical-align: middle;
-    line-height: 40px;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -98,8 +97,7 @@ body {
     text-align: center;
 }
 
-#mul_upgrade {
-    margin-top: 10px;
-    height: 72px;
-    line-height: 24px;
+#actions_action, #actions_reset {
+    height: 40px;
+    line-height: 40px;
 }

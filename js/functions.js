@@ -17,14 +17,14 @@ function action () {
     if (gameValues.r > 0) {
         if (rng.random() < gameValues.prob) gameValues.r *= gameValues.mul
         else gameValues.r = 0
-        gameValues.x += 1
+        gameValues.x += rng.random() * (gameValues.x_gain_max - gameValues.x_gain_min) + gameValues.x_gain_min
     }
 }
 
 function reset () {
     if (gameValues.r <= 0) {
         gameValues.r = gameValues.base_r
-        $('#random_title')[0].innerText = randomString()
+        $('#random_title').html(randomString())
     }
 }
 
@@ -47,16 +47,31 @@ function upgradeMul () {
 }
 
 function update () {
-    $('#value_r')[0].innerText = format(gameValues.r)
-    $('#value_x')[0].innerText = format(gameValues.x)
-    $('#value_rtp')[0].innerText = format(gameValues.rtp) + '%'
-    $('#value_mul')[0].innerText = 'x' + format(gameValues.mul)
-    $('#value_prob')[0].innerText = format(gameValues.prob * 100) + '%'
-    $('#value_base_r')[0].innerText = format(gameValues.base_r)
-    $('#upgrade_rtp_boost')[0].innerText = '+' + format(gameValues.upgrade_rtp_boost) + '%'
-    $('#upgrade_rtp_cost')[0].innerText = format(gameValues.upgrade_rtp_cost) + ' R'
-    $('#upgrade_mul_boost')[0].innerText = '+' + format(gameValues.upgrade_mul_boost)
-    $('#upgrade_mul_cost')[0].innerText = format(gameValues.upgrade_mul_cost) + ' R'
+    $('#value_r').html(format(gameValues.r))
+    $('#value_x').html(format(gameValues.x))
+    $('#value_rtp').html(format(gameValues.rtp) + '%')
+    $('#value_mul').html('x' + format(gameValues.mul))
+    $('#value_prob').html(format(gameValues.prob * 100) + '%')
+    $('#value_base_r').html(format(gameValues.base_r))
+    $('#value_x_gain').html('[' + format(gameValues.x_gain_min) + '; ' + format(gameValues.x_gain_max) + ')')
+    $('#value_auto_reset_time').html(format(gameValues.auto_reset_time) + 's')
+    $('#value_auto_action_time').html(format(gameValues.auto_action_time) + 's')
+    $('#upgrade_rtp_boost').html('+' + format(gameValues.upgrade_rtp_boost) + '%')
+    $('#upgrade_rtp_cost').html(format(gameValues.upgrade_rtp_cost) + ' R')
+    $('#upgrade_mul_boost').html('+' + format(gameValues.upgrade_mul_boost))
+    $('#upgrade_mul_cost').html(format(gameValues.upgrade_mul_cost) + ' R')
+    $('#upgrade_base_r_boost').html('x' + format(gameValues.upgrade_base_r_boost))
+    $('#upgrade_base_r_cost').html(format(gameValues.upgrade_base_r_cost) + ' X')
+    $('#upgrade_x_gain_min_boost').html('Min +' + format(gameValues.upgrade_x_gain_min_boost))
+    $('#upgrade_x_gain_min_cost').html(format(gameValues.upgrade_x_gain_min_cost) + ' R')
+    $('#upgrade_x_gain_max_boost').html('Max +' + format(gameValues.upgrade_x_gain_max_boost))
+    $('#upgrade_x_gain_max_cost').html(format(gameValues.upgrade_x_gain_max_cost) + ' R')
+    $('#upgrade_auto_reset_base_time').html(format(gameValues.upgrade_auto_reset_base_time) + 's')
+    $('#upgrade_auto_reset_cost').html(format(gameValues.upgrade_auto_reset_cost) + ' X')
+    $('#upgrade_auto_reset_boost').html(format(gameValues.upgrade_auto_reset_boost) + 's')
+    $('#upgrade_auto_action_base_time').html(format(gameValues.upgrade_auto_action_base_time) + 's')
+    $('#upgrade_auto_action_cost').html(format(gameValues.upgrade_auto_action_cost) + ' X')
+    $('#upgrade_auto_action_boost').html(format(gameValues.upgrade_auto_action_boost) + 's')
 
     if (gameValues.r > 0) {
         $('#actions_action').addClass('action-available')

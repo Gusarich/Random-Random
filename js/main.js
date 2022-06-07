@@ -6,6 +6,10 @@ $(document).ready(() => {
         mul: 2.0,
         prob: 0.0,
         base_r: 1.0,
+        x_gain_min: 0.0,
+        x_gain_max: 1.0,
+        auto_reset_time: 0.0,
+        auto_action_time: 0.0,
 
         upgrade_rtp_cost: 5.0,
         upgrade_rtp_boost: 1.0,
@@ -14,6 +18,28 @@ $(document).ready(() => {
         upgrade_mul_cost: 30.0,
         upgrade_mul_boost: 0.1,
         upgrade_mul_costmul: 1.4,
+
+        upgrade_base_r_cost: 25.0,
+        upgrade_base_r_boost: 2.0,
+        upgrade_base_r_costmul: 2.5,
+
+        upgrade_x_gain_min_cost: 25.0,
+        upgrade_x_gain_min_boost: 0.1,
+        upgrade_x_gain_min_costmul: 1.5,
+
+        upgrade_x_gain_max_cost: 25.0,
+        upgrade_x_gain_max_boost: 0.1,
+        upgrade_x_gain_max_costmul: 1.5,
+
+        upgrade_auto_reset_cost: 50.0,
+        upgrade_auto_reset_boost: -0.1,
+        upgrade_auto_reset_costmul: 1.4,
+        upgrade_auto_reset_base_time: 2.0,
+
+        upgrade_auto_action_cost: 100.0,
+        upgrade_auto_action_boost: -0.05,
+        upgrade_auto_action_costmul: 1.4,
+        upgrade_auto_action_base_time: 1.0,
     }
 
     gameValues.prob = gameValues.rtp / (100 * gameValues.mul)
