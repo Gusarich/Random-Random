@@ -85,4 +85,26 @@ function update () {
     else $('#rtp_upgrade').removeClass('action-available')
     if (gameValues.r > gameValues.upgrade_mul_cost) $('#mul_upgrade').addClass('action-available')
     else $('#mul_upgrade').removeClass('action-available')
+    if (gameValues.x > gameValues.upgrade_base_r_cost) $('#base_r_upgrade').addClass('action-available')
+    else $('#base_r_upgrade').removeClass('action-available')
+    if (gameValues.r > gameValues.upgrade_x_gain_min_cost) $('#upgrade_x_gain_min').addClass('action-available')
+    else $('#upgrade_x_gain_min').removeClass('action-available')
+    if (gameValues.r > gameValues.upgrade_x_gain_max_cost) $('#upgrade_x_gain_max').addClass('action-available')
+    else $('#upgrade_x_gain_max').removeClass('action-available')
+    if (gameValues.x > gameValues.upgrade_auto_reset_cost) {
+        $('#auto_reset_unlock').addClass('action-available')
+        $('#auto_reset_upgrade').addClass('action-available')
+    }
+    else {
+        $('#auto_reset_unlock').removeClass('action-available')
+        $('#auto_reset_upgrade').removeClass('action-available')
+    }
+    if (gameValues.x > gameValues.upgrade_auto_action_cost) {
+        $('#auto_action_unlock').addClass('action-available')
+        $('#auto_action_upgrade').addClass('action-available')
+    }
+    else {
+        $('#auto_action_unlock').removeClass('action-available')
+        $('#auto_action_upgrade').removeClass('action-available')
+    }
 }
