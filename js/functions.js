@@ -55,7 +55,7 @@ function update () {
     $('#value_base_r')[0].innerText = format(gameValues.base_r)
     $('#upgrade_rtp_boost')[0].innerText = '+' + format(gameValues.upgrade_rtp_boost) + '%'
     $('#upgrade_rtp_cost')[0].innerText = format(gameValues.upgrade_rtp_cost) + ' R'
-    $('#upgrade_mul_boost')[0].innerText = '+' + format(gameValues.upgrade_mul_boost) + '%'
+    $('#upgrade_mul_boost')[0].innerText = '+' + format(gameValues.upgrade_mul_boost)
     $('#upgrade_mul_cost')[0].innerText = format(gameValues.upgrade_mul_cost) + ' R'
 
     if (gameValues.r > 0) {
