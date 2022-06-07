@@ -107,6 +107,21 @@ function upgradeAutoAction () {
 }
 
 function update () {
+    let time = Date.now()
+
+    if (gameValues.auto_reset_time > 0) {
+        if ((time - gameValues.lastAutoReset) / 1000 >= gameValues.auto_reset_time) {
+            reset()
+            gameValues.lastAutoReset = time
+        }
+    }
+    if (gameValues.auto_action_time > 0) {
+        if ((time - gameValues.lastAutoAction) / 1000 >= gameValues.auto_action_time) {
+            action()
+            gameValues.lastAutoAction = time
+        }
+    }
+
     $('.value_r').html(format(gameValues.r))
     $('.value_x').html(format(gameValues.x))
     $('.value_rtp').html(format(gameValues.rtp) + '%')
