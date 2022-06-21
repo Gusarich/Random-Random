@@ -7,7 +7,13 @@ body {
     background-color: #232328;
     color: #F7F9FB;
     font-family: 'Mulish', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .title {
@@ -34,22 +40,29 @@ body {
     font-size: 16px;
 }
 
-.rtp {
+.upgrades-left {
     position: absolute;
-    left: 25%;
+    left: 20%;
     top: 20px;
     transform: translate(-50%);
     font-size: 18px;
     text-align: center;
 }
 
-.actions {
+.actions-left, .actions-right {
     position: absolute;
-    left: 50%;
     top: 20px;
     transform: translate(-50%);
     font-size: 18px;
     text-align: center;
+}
+
+.actions-left {
+    left: 40%;
+}
+
+.actions-right {
+    left: 60%;
 }
 
 .action {
@@ -65,13 +78,6 @@ body {
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 30px;
-
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .action-available {
@@ -82,9 +88,9 @@ body {
     display: block;
 }
 
-.mul {
+.upgrades-right {
     position: absolute;
-    left: 75%;
+    left: 80%;
     top: 20px;
     transform: translate(-50%);
     font-size: 18px;
@@ -94,4 +100,8 @@ body {
 .actions_action, .actions_reset {
     height: 40px;
     line-height: 40px;
+}
+
+.x_gain_min_upgrade {
+    margin-bottom: 10px;
 }

@@ -29,6 +29,8 @@ function reset () {
 }
 
 function update () {
+    anyAvailable = upgrades.map((upgrade) => upgrade.update() && upgrade.costCur == 'r').some((v) => v)
+
     let time = Date.now()
 
     if (gameValues.auto_reset_time > 0) {
@@ -39,7 +41,7 @@ function update () {
     }
     if (gameValues.auto_action_time > 0) {
         if ((time - gameValues.lastAutoAction) / 1000 >= gameValues.auto_action_time) {
-            action()
+            if (!anyAvailable) action()
             gameValues.lastAutoAction = time
         }
     }
@@ -77,32 +79,5 @@ function update () {
     else {
         $('.actions_action').removeClass('action-available')
         $('.actions_reset').addClass('action-available')
-    }
-
-    if (upgradeRTP.available) $('.rtp_upgrade').addClass('action-available')
-    else $('.rtp_upgrade').removeClass('action-available')
-    if (upgradeMul.available) $('.mul_upgrade').addClass('action-available')
-    else $('.mul_upgrade').removeClass('action-available')
-    if (upgradeBaseR.available) $('.base_r_upgrade').addClass('action-available')
-    else $('.base_r_upgrade').removeClass('action-available')
-    if (upgradeXGainMin.available) $('.x_gain_min_upgrade').addClass('action-available')
-    else $('.x_gain_min_upgrade').removeClass('action-available')
-    if (upgradeXGainMax.available) $('.x_gain_max_upgrade').addClass('action-available')
-    else $('.x_gain_max_upgrade').removeClass('action-available')
-    if (upgradeAutoReset.available) {
-        $('.auto_reset_unlock').addClass('action-available')
-        $('.auto_reset_upgrade').addClass('action-available')
-    }
-    else {
-        $('.auto_reset_unlock').removeClass('action-available')
-        $('.auto_reset_upgrade').removeClass('action-available')
-    }
-    if (upgradeAutoAction.available) {
-        $('.auto_action_unlock').addClass('action-available')
-        $('.auto_action_upgrade').addClass('action-available')
-    }
-    else {
-        $('.auto_action_unlock').removeClass('action-available')
-        $('.auto_action_upgrade').removeClass('action-available')
     }
 }
